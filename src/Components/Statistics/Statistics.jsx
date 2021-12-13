@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Notification from "../Notification/Notification";
 const Statistics = ({ good, neutral, bad, total, positiveFedback }) => {
   return (
@@ -18,5 +19,11 @@ const Statistics = ({ good, neutral, bad, total, positiveFedback }) => {
       )}
     </>
   );
+};
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
 };
 export default Statistics;
